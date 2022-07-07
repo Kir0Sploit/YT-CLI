@@ -28,5 +28,11 @@ if [ -z "$1" ]
 fi
 
 query=$(printf '%s' "$*" | tr ' ' '+')
+mpv=/usr/bin/mpv
 
-mpv "https://youtube.com/$(curl -s "https://vid.puffyan.us/search?q=$query" | grep -Eo "watch\?v=.{11}" | head -n 1)"
+if [ -f "$mpv" ]; then
+	echo $(mpv "https://youtube.com/$(curl -s "https://vid.puffyan.us/search?q=$query" | grep -Eo "watch\?v=.{11}" | head -n 1)")
+else
+	echo -e "\n${red}There is no mpv package installed.${reset}"	
+fi
+       
