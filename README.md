@@ -1,6 +1,8 @@
 # YT-CLI
 Youtube music player CLI
 
+https://user-images.githubusercontent.com/89238534/177817025-5aa04931-138f-4093-8f91-19a35382f5f0.mp4
+
 A simple youtube music player command-line based interface. 
 
 **Requirements**
